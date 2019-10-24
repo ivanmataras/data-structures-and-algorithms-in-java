@@ -12,7 +12,7 @@
 
     <parent>
         <groupId>ru.ivanmataras.education</groupId>
-        <artifactId>>data-structures-and-algorithms-in-java</artifactId>
+        <artifactId>data-structures-and-algorithms-in-java</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
