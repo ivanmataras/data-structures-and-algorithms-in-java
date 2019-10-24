@@ -78,8 +78,6 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # Module target directories
-client/target
-dao/target
-entities/target
-protocol/target
-server/target
+chapter-1/target
+chapter-2/target
+chapter-3/target
