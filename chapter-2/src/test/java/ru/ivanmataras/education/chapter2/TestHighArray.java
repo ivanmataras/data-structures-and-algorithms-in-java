@@ -66,6 +66,12 @@ public class TestHighArray {
     }
 
     @Test
+    void testInsertAdditionalElements() {
+        highArray.insert(97);
+        highArray.insert(98);
+    }
+
+    @Test
     @AfterAll
     @Disabled
     static void testDestroyArray() {

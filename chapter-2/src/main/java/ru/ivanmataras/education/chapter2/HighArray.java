@@ -37,7 +37,12 @@ public class HighArray implements IntArray {
 
     @Override
     public void insert(int value) {
-        array[numberElements] = value;
+        if (numberElements != array.length) {
+            array[numberElements] = value;
+        } else {
+            grow();
+            array[numberElements] = value;
+        }
         numberElements++;
     }
 
@@ -66,6 +71,16 @@ public class HighArray implements IntArray {
             return true;
         }
 
+    }
+
+    private void grow() {
+        int[] newarray = new int[array.length + 1];
+
+        for (int currentIndex = 0; currentIndex < array.length; currentIndex++) {
+            newarray[currentIndex] = array[currentIndex];
+        }
+
+        array = newarray;
     }
 
     @Override
