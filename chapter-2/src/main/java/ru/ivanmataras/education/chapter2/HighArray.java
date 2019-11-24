@@ -55,7 +55,12 @@ public class HighArray implements IntArray {
             return false;
         } else {
             for (int deleteIndex = currentIndex; deleteIndex < numberElements; deleteIndex++) {
-                array[deleteIndex] = array[deleteIndex + 1];
+                if (deleteIndex + 1 > numberElements) {
+                    array[deleteIndex] = array[deleteIndex + 1];
+                } else {
+                    array[deleteIndex] = 0;
+                    break;
+                }
             }
             numberElements--;
             return true;
