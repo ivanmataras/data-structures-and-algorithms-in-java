@@ -1,5 +1,7 @@
 package ru.ivanmataras.education.chapter2;
 
+import java.util.Arrays;
+
 public class OrderedArray implements IntArray {
 
     private int[] array;
@@ -91,7 +93,7 @@ public class OrderedArray implements IntArray {
 
     @Override
     public String display() {
-        return null;
+        return Arrays.toString(array);
     }
 
 }

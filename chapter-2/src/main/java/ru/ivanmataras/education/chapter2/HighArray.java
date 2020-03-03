@@ -1,5 +1,7 @@
 package ru.ivanmataras.education.chapter2;
 
+import java.util.Arrays;
+
 public class HighArray implements IntArray {
 
     private int[] array;
@@ -60,7 +62,7 @@ public class HighArray implements IntArray {
             return false;
         } else {
             for (int deleteIndex = currentIndex; deleteIndex < numberElements; deleteIndex++) {
-                if (deleteIndex + 1 > numberElements) {
+                if (deleteIndex < numberElements && deleteIndex != numberElements - 1) {
                     array[deleteIndex] = array[deleteIndex + 1];
                 } else {
                     array[deleteIndex] = 0;
@@ -90,7 +92,7 @@ public class HighArray implements IntArray {
 
     @Override
     public String display() {
-        return null;
+        return Arrays.toString(array);
     }
 
 }
