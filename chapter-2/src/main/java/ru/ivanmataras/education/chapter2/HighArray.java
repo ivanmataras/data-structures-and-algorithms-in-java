@@ -39,12 +39,10 @@ public class HighArray implements IntArray {
 
     @Override
     public void insert(int value) {
-        if (numberElements != array.length) {
-            array[numberElements] = value;
-        } else {
+        if (numberElements == array.length) {
             grow();
-            array[numberElements] = value;
         }
+        array[numberElements] = value;
         numberElements++;
     }
 
@@ -77,11 +75,9 @@ public class HighArray implements IntArray {
 
     private void grow() {
         int[] newarray = new int[array.length + 1];
-
         for (int currentIndex = 0; currentIndex < array.length; currentIndex++) {
             newarray[currentIndex] = array[currentIndex];
         }
-
         array = newarray;
     }
 
