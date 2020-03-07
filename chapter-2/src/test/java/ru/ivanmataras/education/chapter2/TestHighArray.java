@@ -14,7 +14,6 @@ public class TestHighArray {
     @Test
     @BeforeAll
     static void testCreateArrayAndInsertValues() {
-
         highArray = new HighArray();
         highArray.insert(77);
         highArray.insert(99);
@@ -26,9 +25,7 @@ public class TestHighArray {
         highArray.insert(0);
         highArray.insert(66);
         highArray.insert(33);
-
         assertEquals(DEFAULT_SIZE, highArray.size());
-
     }
 
     @Test

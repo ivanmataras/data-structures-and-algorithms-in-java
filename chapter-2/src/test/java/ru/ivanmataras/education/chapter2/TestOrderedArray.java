@@ -1,86 +1,81 @@
 package ru.ivanmataras.education.chapter2;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestOrderedArray {
 
-    private static OrderedArray highArray;
+    private static OrderedArray orderedArray;
     private static final int DEFAULT_SIZE = 10;
 
     @Test
     @BeforeAll
-    static void testCreateArray() {
-
-        highArray = new OrderedArray();
-        assertNotNull(highArray);
-
+    static void testCreateArrayAndInsertValues() {
+        orderedArray = new OrderedArray();
+        orderedArray.insert(77);
+        orderedArray.insert(99);
+        orderedArray.insert(44);
+        orderedArray.insert(55);
+        orderedArray.insert(22);
+        orderedArray.insert(88);
+        orderedArray.insert(11);
+        orderedArray.insert(0);
+        orderedArray.insert(66);
+        orderedArray.insert(33);
+        assertEquals(DEFAULT_SIZE, orderedArray.size());
     }
 
     @Test
-    @BeforeAll
-    static void testInsertValues() {
-
-        highArray.insert(77);
-        highArray.insert(99);
-        highArray.insert(44);
-        highArray.insert(55);
-        highArray.insert(22);
-        highArray.insert(88);
-        highArray.insert(11);
-        highArray.insert(0);
-        highArray.insert(66);
-        highArray.insert(33);
-
-        assertEquals(DEFAULT_SIZE, highArray.size());
-
-    }
-
-    @Test
-    @Disabled
+    @Order(1)
     void testSearchExistingValue() {
-        boolean result = highArray.find(33);
+        boolean result = orderedArray.find(33);
         assertEquals(true, result);
     }
 
     @Test
-    @Disabled
+    @Order(2)
     void testSearchNotExistingValue() {
-        boolean result = highArray.find(3);
+        boolean result = orderedArray.find(3);
         assertEquals(false, result);
     }
 
     @Test
-    @Disabled
+    @Order(3)
     void testDeleteExistingValue() {
-        boolean result = highArray.delete(33);
+        boolean result = orderedArray.delete(33);
         assertEquals(true, result);
     }
 
     @Test
-    @Disabled
+    @Order(4)
     void testDeleteNotExistingValue() {
-        boolean result = highArray.delete(35);
+        boolean result = orderedArray.delete(35);
         assertEquals(false, result);
     }
 
     @Test
-    @Disabled
+    @Order(5)
     void testInsertAdditionalElements() {
-        highArray.insert(97);
-        highArray.insert(98);
+        orderedArray.insert(97);
+        orderedArray.insert(98);
     }
 
     @Test
-    @AfterAll
-    @Disabled
-    static void testDestroyArray() {
-
+    @Order(6)
+    void testDeletePreviousToLastExistingValue() {
+        boolean result = orderedArray.delete(97);
+        assertEquals(true, result);
     }
+
+    @Test
+    @Order(7)
+    void testDeleteLastExistingValue() {
+        boolean result = orderedArray.delete(98);
+        assertEquals(true, result);
+    }
+
 
 }
