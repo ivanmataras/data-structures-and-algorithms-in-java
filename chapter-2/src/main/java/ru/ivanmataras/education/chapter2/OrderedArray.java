@@ -44,7 +44,7 @@ public class OrderedArray implements IntArray {
 
     }
 
-    private int findIndexByValue(int value) {
+    private int findIndexByValueToDelete(int value) {
 
         int lowerBound = 0;
         int upperBound = numberElements - 1;
@@ -72,7 +72,7 @@ public class OrderedArray implements IntArray {
         if (numberElements == array.length) {
             grow();
         }
-        int insertIndex = findIndexByValue(value);
+        int insertIndex;
         for (insertIndex = 0; insertIndex < numberElements; insertIndex++) {
             if (array[insertIndex] > value) {
                 break;
@@ -88,7 +88,7 @@ public class OrderedArray implements IntArray {
     @Override
     public boolean delete(int value) {
 
-        int currentIndex = findIndexByValue(value);
+        int currentIndex = findIndexByValueToDelete(value);
 
         if (currentIndex == numberElements) {
             return false;
