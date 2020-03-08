@@ -77,11 +77,11 @@ public class OrderedArray implements IntArray {
     }
 
     private void grow() {
-        int[] newarray = new int[array.length + 1];
+        int[] newArray = new int[array.length + 1];
         for (int currentIndex = 0; currentIndex < array.length; currentIndex++) {
-            newarray[currentIndex] = array[currentIndex];
+            newArray[currentIndex] = array[currentIndex];
         }
-        array = newarray;
+        array = newArray;
     }
 
     @Override
