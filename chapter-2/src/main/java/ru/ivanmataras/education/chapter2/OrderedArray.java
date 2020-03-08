@@ -44,30 +44,19 @@ public class OrderedArray implements IntArray {
 
     @Override
     public void insert(int value) {
-        if (numberElements != array.length) {
-            int insertIndex;
-            for (insertIndex = 0; insertIndex < numberElements; insertIndex++) {
-                if (array[insertIndex] > value) {
-                    break;
-                }
-            }
-            for (int currentIndex = numberElements; currentIndex > insertIndex; currentIndex--) {
-                array[currentIndex] = array[currentIndex - 1];
-            }
-            array[insertIndex] = value;
-        } else {
+        if (numberElements == array.length) {
             grow();
-            int insertIndex;
-            for (insertIndex = 0; insertIndex < numberElements; insertIndex++) {
-                if (array[insertIndex] > value) {
-                    break;
-                }
-            }
-            for (int currentIndex = numberElements; currentIndex > insertIndex; currentIndex--) {
-                array[currentIndex] = array[currentIndex - 1];
-            }
-            array[insertIndex] = value;
         }
+        int insertIndex;
+        for (insertIndex = 0; insertIndex < numberElements; insertIndex++) {
+            if (array[insertIndex] > value) {
+                break;
+            }
+        }
+        for (int currentIndex = numberElements; currentIndex > insertIndex; currentIndex--) {
+            array[currentIndex] = array[currentIndex - 1];
+        }
+        array[insertIndex] = value;
         numberElements++;
     }
 
