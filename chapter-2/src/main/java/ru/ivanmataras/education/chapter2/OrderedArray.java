@@ -44,6 +44,29 @@ public class OrderedArray implements IntArray {
 
     }
 
+    private int findIndexByValue(int value) {
+
+        int lowerBound = 0;
+        int upperBound = numberElements - 1;
+        int currentIndex;
+
+        while (true) {
+            currentIndex = (lowerBound + upperBound) / 2;
+            if (array[currentIndex] == value) {
+                return currentIndex;
+            } else if (lowerBound > upperBound) {
+                return numberElements;
+            } else {
+                if (array[currentIndex] < value) {
+                    lowerBound = currentIndex + 1;
+                } else {
+                    upperBound = currentIndex - 1;
+                }
+            }
+        }
+
+    }
+
     @Override
     public void insert(int value) {
         if (numberElements == array.length) {
@@ -64,7 +87,23 @@ public class OrderedArray implements IntArray {
 
     @Override
     public boolean delete(int value) {
-        return false;
+        int currentIndex = findIndexByValue(value);
+
+        if (currentIndex == numberElements) {
+            return false;
+        } else {
+            for (int deleteIndex = currentIndex; deleteIndex < numberElements; deleteIndex++) {
+                if (deleteIndex < numberElements && deleteIndex != numberElements - 1) {
+                    array[deleteIndex] = array[deleteIndex + 1];
+                } else {
+                    array[deleteIndex] = 0;
+                    break;
+                }
+            }
+            numberElements--;
+            return true;
+        }
+
     }
 
     private void grow() {
