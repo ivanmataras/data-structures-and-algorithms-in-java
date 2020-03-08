@@ -72,7 +72,7 @@ public class OrderedArray implements IntArray {
         if (numberElements == array.length) {
             grow();
         }
-        int insertIndex;
+        int insertIndex = findIndexByValue(value);
         for (insertIndex = 0; insertIndex < numberElements; insertIndex++) {
             if (array[insertIndex] > value) {
                 break;
