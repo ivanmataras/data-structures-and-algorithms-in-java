@@ -19,22 +19,17 @@ public class HighArray implements IntArray {
     }
 
     @Override
-    public boolean find(int value) {
+    public int find(int value) {
 
         int currentIndex;
+        int result = 0;
 
         for (currentIndex = 0; currentIndex < numberElements; currentIndex++) {
             if (array[currentIndex] == value) {
-                break;
+                result = array[currentIndex];
             }
         }
-
-        if (currentIndex == numberElements) {
-            return false;
-        } else {
-            return true;
-        }
-
+        return result;
     }
 
     @Override

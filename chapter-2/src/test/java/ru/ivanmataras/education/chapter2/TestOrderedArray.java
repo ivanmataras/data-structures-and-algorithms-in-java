@@ -31,15 +31,15 @@ public class TestOrderedArray {
     @Test
     @Order(1)
     void testSearchExistingValue() {
-        boolean result = orderedArray.find(33);
-        assertEquals(true, result);
+        int result = orderedArray.find(33);
+        assertEquals(33, result);
     }
 
     @Test
     @Order(2)
     void testSearchNotExistingValue() {
-        boolean result = orderedArray.find(3);
-        assertEquals(false, result);
+        int result = orderedArray.find(3);
+        assertEquals(0, result);
     }
 
     @Test

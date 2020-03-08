@@ -19,8 +19,9 @@ public class OrderedArray implements IntArray {
     }
 
     @Override
-    public boolean find(int value) {
+    public int find(int value) {
 
+        int result = 0;
         int lowerBound = 0;
         int upperBound = numberElements - 1;
         int currentIndex;
@@ -28,9 +29,10 @@ public class OrderedArray implements IntArray {
         while (true) {
             currentIndex = (lowerBound + upperBound) / 2;
             if (array[currentIndex] == value) {
-                return true;
+                result = array[currentIndex];
+                return result;
             } else if (lowerBound > upperBound) {
-                return false;
+                return result;
             } else {
                 if (array[currentIndex] < value) {
                     lowerBound = currentIndex + 1;

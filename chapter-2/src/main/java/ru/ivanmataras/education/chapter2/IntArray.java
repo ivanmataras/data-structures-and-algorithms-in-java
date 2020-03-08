@@ -2,7 +2,7 @@ package ru.ivanmataras.education.chapter2;
 
 public interface IntArray {
 
-    boolean find(int value);
+    int find(int value);
 
     void insert(int value);
 
