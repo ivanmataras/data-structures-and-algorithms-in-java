@@ -87,6 +87,7 @@ public class OrderedArray implements IntArray {
 
     @Override
     public boolean delete(int value) {
+
         int currentIndex = findIndexByValue(value);
 
         if (currentIndex == numberElements) {
