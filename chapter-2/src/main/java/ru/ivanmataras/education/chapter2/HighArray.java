@@ -45,6 +45,7 @@ public class HighArray implements IntArray {
     public boolean delete(int value) {
 
         int currentIndex;
+
         for (currentIndex = 0; currentIndex < numberElements; currentIndex++) {
             if (value == array[currentIndex]) {
                 break;
