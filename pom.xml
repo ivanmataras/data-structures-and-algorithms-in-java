@@ -35,7 +35,6 @@
                 <version>1.6.0</version>
                 <scope>test</scope>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
@@ -47,10 +46,10 @@
 
     <properties>
         <maven.version>3.6.2</maven.version>
-        <jdk.version>13</jdk.version>
+        <jdk.version>14</jdk.version>
         <!--        <maven.compiler.source>13</maven.compiler.source>-->
         <!--        <maven.compiler.target>13</maven.compiler.target>-->
-        <maven.compiler.release>13</maven.compiler.release>
+        <maven.compiler.release>14</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
