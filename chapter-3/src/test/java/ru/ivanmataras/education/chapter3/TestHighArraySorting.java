@@ -5,7 +5,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class TestBubbleSort {
+public class TestHighArraySorting {
 
     private static HighArray highArraySample;
     private static final int DEFAULT_SIZE = 10;
