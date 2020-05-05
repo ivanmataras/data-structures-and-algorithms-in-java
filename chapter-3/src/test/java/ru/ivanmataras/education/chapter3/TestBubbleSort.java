@@ -47,19 +47,20 @@ public class TestBubbleSort {
 
     @Test
     @Order(2)
-    @Disabled
     void testSelectionSort() {
         HighArray highArray = new HighArray();
-        highArraySample.insert(77);
-        highArraySample.insert(99);
-        highArraySample.insert(44);
-        highArraySample.insert(55);
-        highArraySample.insert(22);
-        highArraySample.insert(88);
-        highArraySample.insert(11);
-        highArraySample.insert(0);
-        highArraySample.insert(66);
-        highArraySample.insert(33);
+        highArray.insert(77);
+        highArray.insert(99);
+        highArray.insert(44);
+        highArray.insert(55);
+        highArray.insert(22);
+        highArray.insert(88);
+        highArray.insert(11);
+        highArray.insert(0);
+        highArray.insert(66);
+        highArray.insert(33);
+        highArray.selectionSort();
+        assertEquals(highArraySample.getArray(), highArray.getArray());
     }
 
     @Test
@@ -67,16 +68,18 @@ public class TestBubbleSort {
     @Disabled
     void testInsertionSort() {
         HighArray highArray = new HighArray();
-        highArraySample.insert(77);
-        highArraySample.insert(99);
-        highArraySample.insert(44);
-        highArraySample.insert(55);
-        highArraySample.insert(22);
-        highArraySample.insert(88);
-        highArraySample.insert(11);
-        highArraySample.insert(0);
-        highArraySample.insert(66);
-        highArraySample.insert(33);
+        highArray.insert(77);
+        highArray.insert(99);
+        highArray.insert(44);
+        highArray.insert(55);
+        highArray.insert(22);
+        highArray.insert(88);
+        highArray.insert(11);
+        highArray.insert(0);
+        highArray.insert(66);
+        highArray.insert(33);
+        highArray.insertionSort();
+        assertEquals(highArraySample.getArray(), highArray.getArray());
     }
 
 }

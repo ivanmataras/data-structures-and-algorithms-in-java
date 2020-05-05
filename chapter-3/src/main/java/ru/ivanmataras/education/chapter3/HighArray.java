@@ -110,6 +110,28 @@ public class HighArray implements IntArray {
 
     public void selectionSort() {
 
+        int out;
+        int in;
+        int min;
+
+        for (out = 0; out < numberElements - 1; out++) {
+
+            min = out;
+
+            for (in = out + 1; in < numberElements; in++) {
+
+                if (array[in] < array[min]) {
+                    min = in;
+                }
+
+            }
+
+            int temporaryVariable = array[out];
+            array[out] = array[min];
+            array[min] = temporaryVariable;
+
+        }
+
     }
 
     public void insertionSort() {
