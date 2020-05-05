@@ -1,3 +1,3 @@
-module chapter {
+module chapter.one {
     requires java.base;
 }
