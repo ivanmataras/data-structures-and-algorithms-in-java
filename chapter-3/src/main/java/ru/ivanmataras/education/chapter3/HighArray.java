@@ -97,13 +97,17 @@ public class HighArray implements IntArray {
         int in;
 
         for (out = numberElements - 1; out > 1; out--) {
+
             for (in = 0; in < out; in++) {
+
                 if (array[in] > array[in + 1]) {
                     int temporaryVariable = array[in];
                     array[in] = array[in + 1];
                     array[in + 1] = temporaryVariable;
                 }
+
             }
+
         }
 
     }
