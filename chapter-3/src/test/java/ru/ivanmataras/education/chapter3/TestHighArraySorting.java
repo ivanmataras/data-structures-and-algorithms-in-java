@@ -65,7 +65,6 @@ public class TestHighArraySorting {
 
     @Test
     @Order(3)
-    @Disabled
     void testInsertionSort() {
         HighArray highArray = new HighArray();
         highArray.insert(77);

@@ -140,6 +140,23 @@ public class HighArray implements IntArray {
 
     public void insertionSort() {
 
+        int out;
+        int in;
+
+        for (out = 1; out < numberElements; out++) {
+
+            int temp = array[out];
+            in = out;
+
+            while (in > 0 && array[in - 1] >= temp) {
+                array[in] = array[in - 1];
+                --in;
+            }
+
+            array[in] = temp;
+
+        }
+
     }
 
 }
