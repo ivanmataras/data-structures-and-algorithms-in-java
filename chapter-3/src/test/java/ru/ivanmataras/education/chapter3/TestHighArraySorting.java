@@ -2,6 +2,7 @@ package ru.ivanmataras.education.chapter3;
 
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -42,7 +43,7 @@ public class TestHighArraySorting {
         highArray.insert(66);
         highArray.insert(33);
         highArray.bubbleSort();
-        assertEquals(highArraySample.getArray(), highArray.getArray());
+        assertArrayEquals(highArraySample.getArray(), highArray.getArray());
     }
 
     @Test
@@ -60,7 +61,7 @@ public class TestHighArraySorting {
         highArray.insert(66);
         highArray.insert(33);
         highArray.selectionSort();
-        assertEquals(highArraySample.getArray(), highArray.getArray());
+        assertArrayEquals(highArraySample.getArray(), highArray.getArray());
     }
 
     @Test
@@ -78,7 +79,7 @@ public class TestHighArraySorting {
         highArray.insert(66);
         highArray.insert(33);
         highArray.insertionSort();
-        assertEquals(highArraySample.getArray(), highArray.getArray());
+        assertArrayEquals(highArraySample.getArray(), highArray.getArray());
     }
 
 }
