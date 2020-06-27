@@ -145,15 +145,15 @@ public class HighArray implements IntArray {
 
         for (out = 1; out < numberElements; out++) {
 
-            int temp = array[out];
+            int temporaryVariable = array[out];
             in = out;
 
-            while (in > 0 && array[in - 1] >= temp) {
+            while (in > 0 && array[in - 1] >= temporaryVariable) {
                 array[in] = array[in - 1];
                 --in;
             }
 
-            array[in] = temp;
+            array[in] = temporaryVariable;
 
         }
 
