@@ -5,10 +5,7 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import static java.lang.System.out;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestStack {
@@ -17,7 +14,7 @@ public class TestStack {
     @BeforeAll
     static void testCreateStackAndPushValues() {
 
-        Stack stack = new Stack(10);
+        IntStack stack = new IntStack(10);
         stack.push(20);
         stack.push(40);
         stack.push(60);
@@ -31,7 +28,7 @@ public class TestStack {
     @Order(1)
     void testCreateStackAndPushAndPopValues() {
 
-        Stack stack = new Stack(10);
+        IntStack stack = new IntStack(10);
         stack.push(20);
         stack.push(40);
         stack.push(60);
@@ -45,4 +42,29 @@ public class TestStack {
 
     }
 
+    @Test
+    @Order(2)
+    void testCreateStackAndReverseString() {
+
+        String sampleString = "Hello world";
+        String sampleStringReversed = "dlrow olleH";
+
+        CharStack stack = new CharStack(sampleString.length());
+
+        for (int charIndex = 0; charIndex < sampleString.length(); charIndex++) {
+            char character = sampleString.charAt(charIndex);
+            stack.push(character);
+        }
+
+        StringBuilder resultString = new StringBuilder();
+
+        while (!stack.isEmpty()) {
+            char character = stack.pop();
+            resultString.append(character);
+        }
+
+        assertEquals(sampleStringReversed, resultString.toString());
+
+
+    }
 }

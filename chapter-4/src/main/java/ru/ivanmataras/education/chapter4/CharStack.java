@@ -1,26 +1,26 @@
 package ru.ivanmataras.education.chapter4;
 
-public class Stack {
+public class CharStack {
 
     private int maxSize;
-    private int[] stackArray;
+    private char[] stackArray;
     private int top;
 
-    public Stack(int maxSize) {
+    public CharStack(int maxSize) {
         this.maxSize = maxSize;
-        stackArray = new int[maxSize];
+        stackArray = new char[maxSize];
         top = -1;
     }
 
-    public void push(int element) {
+    public void push(char element) {
         stackArray[++top] = element;
     }
 
-    public int pop() {
+    public char pop() {
         return stackArray[top--];
     }
 
-    public int peek() {
+    public char peek() {
         return stackArray[top];
     }
 
