@@ -10,8 +10,6 @@ import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
-
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestStack {
 
