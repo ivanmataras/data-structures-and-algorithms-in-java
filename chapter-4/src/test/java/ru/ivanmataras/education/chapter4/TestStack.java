@@ -5,6 +5,7 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.TestMethodOrder;
 
+import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -65,6 +66,36 @@ public class TestStack {
 
         assertEquals(sampleStringReversed, resultString.toString());
 
+    }
+
+    @Test
+    @Order(3)
+    void testCreateStackAndCheckBrackets() {
+
+        String sampleString = "a{b(c[d]e)f}";
+
+        CharStack stack = new CharStack(sampleString.length());
+
+        for (int charIndex = 0; charIndex < sampleString.length(); charIndex++) {
+            char ch = sampleString.charAt(charIndex);
+            switch (ch) {
+                case '(', '[', '{' -> stack.push(ch);
+                case ')', ']', '}' -> {
+                    if (!stack.isEmpty()) {
+                        char chx = stack.pop();
+                        if ((ch == ')' && chx != '(') || (ch == ']' && chx != '[') || (ch == '}' && chx != '{')) {
+                            //out.println("Error: " + ch + " at " + charIndex);
+                        } else {
+                            //out.println("Error: " + ch + " at " + charIndex);
+                        }
+                    }
+                }
+            }
+        }
+
+        if (!stack.isEmpty()) {
+            //out.println("Error: missing right delimiter");
+        }
 
     }
 }
