@@ -18,6 +18,7 @@ public class TestPriorityQueue {
         priorityQueue.insert(10);
         priorityQueue.insert(40);
         priorityQueue.insert(20);
+
         while (!priorityQueue.isEmpty()) {
             long item = priorityQueue.remove();
             out.print(item + " ");
