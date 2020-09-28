@@ -47,7 +47,7 @@
 
     <properties>
         <maven.version>3.6.3</maven.version>
-        <jdk.version>14</jdk.version>
+        <jdk.version>15</jdk.version>
         <!--        <maven.compiler.source>14</maven.compiler.source>-->
         <!--        <maven.compiler.target>14</maven.compiler.target>-->
         <maven.compiler.release>14</maven.compiler.release>
