@@ -37,7 +37,6 @@ public class PriorityQueue {
         return queArray[nItems - 1];
     }
 
-
     public boolean isEmpty() {
         return (nItems == 0);
     }
