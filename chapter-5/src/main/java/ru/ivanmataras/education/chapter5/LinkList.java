@@ -2,20 +2,20 @@ package ru.ivanmataras.education.chapter5;
 
 public class LinkList {
 
-    private Link first;
+    private LinkLinkList first;
 
     public LinkList() {
         first = null;
     }
 
     public void insertFirst(int id, double dd) {
-        Link newLink = new Link(id, dd);
+        LinkLinkList newLink = new LinkLinkList(id, dd);
         newLink.next = first;
         first = newLink;
     }
 
-    public Link find(int key) {
-        Link current = first;
+    public LinkLinkList find(int key) {
+        LinkLinkList current = first;
         while (current.iData != key) {
             if (current.next == null) {
                 return null;
@@ -26,9 +26,9 @@ public class LinkList {
         return current;
     }
 
-    public Link delete(int key) {
-        Link current = first;
-        Link previous = first;
+    public LinkLinkList delete(int key) {
+        LinkLinkList current = first;
+        LinkLinkList previous = first;
         while (current.iData != key) {
             if (current.next == null) {
                 return null;
@@ -47,7 +47,7 @@ public class LinkList {
 
     public void displayList() {
         System.out.print("List (first-->last): ");
-        Link current = first;
+        LinkLinkList current = first;
         while (current != null) {
             current.displayLink();
             current = current.next;

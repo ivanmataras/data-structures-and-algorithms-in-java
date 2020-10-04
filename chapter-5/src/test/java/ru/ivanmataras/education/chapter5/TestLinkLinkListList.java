@@ -8,7 +8,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import static java.lang.System.out;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class TestLinkList {
+public class TestLinkLinkListList {
 
     @Test
     @Order(1)
@@ -23,7 +23,7 @@ public class TestLinkList {
 
         theList.displayList();
 
-        Link f = theList.find(44);
+        LinkLinkList f = theList.find(44);
 
         if(f != null) {
             out.println("Found link with key " + f.iData);
@@ -31,7 +31,7 @@ public class TestLinkList {
             System.out.println("Can’t find link");
         }
 
-        Link d = theList.delete(66);
+        LinkLinkList d = theList.delete(66);
 
         if(d != null ) {
             out.println("Deleted link with key " + d.iData);

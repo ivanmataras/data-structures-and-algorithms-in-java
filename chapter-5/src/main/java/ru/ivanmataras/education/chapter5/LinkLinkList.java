@@ -2,13 +2,13 @@ package ru.ivanmataras.education.chapter5;
 
 import static java.lang.System.out;
 
-public class Link {
+public class LinkLinkList {
 
     public int iData;
     public double dData;
-    public Link next;
+    public LinkLinkList next;
 
-    public Link(int id, double dd) {
+    public LinkLinkList(int id, double dd) {
         iData = id;
         dData = dd;
     }
