@@ -8,7 +8,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import static java.lang.System.out;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class TestLinkLinkListList {
+public class TestLinkList {
 
     @Test
     @Order(1)
