@@ -123,15 +123,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M4</version>
-                    <dependencies>
-                        <dependency>
-                            <!-- https://mvnrepository.com/artifact/org.junit/junit-bom -->
-                            <groupId>org.junit</groupId>
-                            <artifactId>junit-bom</artifactId>
-                            <version>5.7.0</version>
-                            <type>pom</type>
-                        </dependency>
-                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
