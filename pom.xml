@@ -48,11 +48,9 @@
     </modules>
 
     <properties>
-        <maven.version>3.6.3</maven.version>
-        <jdk.version>16</jdk.version>
-        <!--        <maven.compiler.source>15</maven.compiler.source>-->
-        <!--        <maven.compiler.target>15</maven.compiler.target>-->
-        <maven.compiler.release>16</maven.compiler.release>
+        <maven.version>3.8.2</maven.version>
+        <jdk.version>17</jdk.version>
+        <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -74,8 +72,6 @@
                     <version>3.8.1</version>
                     <configuration>
                         <encoding>${project.build.sourceEncoding}</encoding>
-                        <!--                        <source>${maven.compiler.source}</source>-->
-                        <!--                        <target>${maven.compiler.target}</target>-->
                         <release>${maven.compiler.release}</release>
                     </configuration>
                 </plugin>
